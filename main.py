@@ -24,7 +24,6 @@ def cross_product(A):
     Y2 = (A[2][1] - A[0][1])
     # Return cross product
     return (X1 * Y2 - Y1 * X2)
- 
 def get_shape_type(polygon):
     # Stores count of
     # edges in polygon
