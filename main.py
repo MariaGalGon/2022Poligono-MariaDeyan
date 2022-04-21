@@ -16,15 +16,12 @@ def cross_product(A):
     # Stores coefficient of Y
     # direction of vector A[1]A[0]
     Y1 = (A[1][1] - A[0][1])
- 
     # Stores coefficient of X
     # direction of vector A[2]A[0]
     X2 = (A[2][0] - A[0][0])
- 
     # Stores coefficient of Y
     # direction of vector A[2]A[0]
     Y2 = (A[2][1] - A[0][1])
- 
     # Return cross product
     return (X1 * Y2 - Y1 * X2)
  
