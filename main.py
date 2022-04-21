@@ -1,4 +1,3 @@
-from operator import is_
 from shapely.geometry import Polygon
 
 def is_inside(polyA, polyB):
@@ -14,7 +13,6 @@ def cross_product(A):
     # Stores coefficient of X
     # direction of vector A[1]A[0]
     X1 = (A[1][0] - A[0][0])
- 
     # Stores coefficient of Y
     # direction of vector A[1]A[0]
     Y1 = (A[1][1] - A[0][1])
@@ -76,7 +74,7 @@ def input_poly():
             y = int(input("Introduce la coordenada y" + str((i+1)) + ": "))
             points.append((x,y))
         return Polygon(points)
-    except:
+    except ValueError:
         print("Puntos no válidos")
         exit(0)
 
