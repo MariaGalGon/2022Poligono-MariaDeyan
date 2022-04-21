@@ -29,26 +29,20 @@ def get_shape_type(polygon):
     # edges in polygon
     points = coordinates(polygon)
     N = len(points)
- 
     # Stores direction of cross product
     # of previous traversed edges
     prev = 0
- 
     # Stores direction of cross product
     # of current traversed edges
     curr = 0
- 
     # Traverse the array
     for i in range(N):
-        
         # Stores three adjacent edges
         # of the polygon
         temp = [points[i], points[(i + 1) % N],
                            points[(i + 2) % N]]
- 
         # Update curr
         curr = cross_product(temp)
- 
         # If curr is not equal to 0
         if (curr != 0):
             # If direction of cross product of
@@ -58,7 +52,6 @@ def get_shape_type(polygon):
             else:
                 # Update curr
                 prev = curr
- 
     return "convexo"
 
 def input_poly():
